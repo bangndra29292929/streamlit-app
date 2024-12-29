@@ -16,10 +16,10 @@ feature3 = st.number_input("Fitur 3", format="%.2f")
 feature4 = st.number_input("Fitur 4", format="%.2f")  # Tambahkan fitur ke-4
 
 # Button to make prediction
-   if st.button("Prediksi"):
-       features = np.array([[feature1, feature2, feature3, feature4]])  # Pastikan 4 fitur
-       try:
-           prediction = model.predict(features)
-           st.write(f"Hasil Prediksi: {prediction[0]}")
-       except Exception as e:
-           st.error(f"Terjadi kesalahan: {e}")
+if st.button("Prediksi"):
+   features = np.array([[feature1, feature2, feature3, feature4]])  # Pastikan 4 fitur
+   try:
+       prediction = model.predict(features)
+       st.write(f"Hasil Prediksi: {prediction[0]}")
+except Exception as e:
+    st.error(f"Terjadi kesalahan: {e}")
