@@ -21,5 +21,5 @@ if st.button("Prediksi"):
    try:
        prediction = model.predict(features)
        st.write(f"Hasil Prediksi: {prediction[0]}")
-except Exception as e:
-    st.error(f"Terjadi kesalahan: {e}")
+   except Exception as e:
+       st.error(f"Terjadi kesalahan: {e}")
